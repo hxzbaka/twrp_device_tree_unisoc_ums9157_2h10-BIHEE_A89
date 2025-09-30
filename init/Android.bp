@@ -1,0 +1,14 @@
+cc_library_static {
+    name: "libinit_bihee_a89",
+    header_libs: [
+        "libbase_headers",
+    ],
+    cflags: [
+        "-Wall",
+    ],
+    static_libs: [
+        "libbase",
+    ],
+    srcs: ["init_bihee_a89.cpp"],
+    recovery_available: true,
+}

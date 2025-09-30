@@ -1,0 +1,52 @@
+/spl                 emmc      /dev/block/mmcblk0boot0              flags=display=spl;slotselect;backup=1;flashimg=1
+/spl_bk              emmc      /dev/block/mmcblk0boot1              flags=display=spl_bk;backup=1;flashimg=1
+/uboot               emmc      /dev/block/by-name/uboot             flags=display=uboot;slotselect;backup=1;flashimg=1
+/sml                 emmc      /dev/block/by-name/sml               flags=display=sml;slotselect;backup=1;flashimg=1
+/tos                 emmc      /dev/block/by-name/trustos           flags=display=tos;slotselect;backup=1;flashimg=1
+/teecfg              emmc      /dev/block/by-name/teecfg            flags=display=teecfg;slotselect;backup=1;flashimg=1
+/vbmeta              emmc      /dev/block/by-name/vbmeta            flags=display=vbmeta;slotselect;backup=1;flashimg=1
+/vbmeta_system       emmc      /dev/block/by-name/vbmeta_system     flags=display=vbmeta_system;slotselect;backup=1;flashimg=1
+/vbmeta_vendor       emmc      /dev/block/by-name/vbmeta_vendor     flags=display=vbmeta_vendor;slotselect;backup=1;flashimg=1
+/dtbo                emmc      /dev/block/by-name/dtbo              flags=display=dtbo;slotselect;backup=1;flashimg=1
+/ltedsp              emmc      /dev/block/by-name/l_ldsp            flags=display=ltedsp;slotselect;backup=1;flashimg=1
+/ltegdsp             emmc      /dev/block/by-name/l_gdsp            flags=display=ltegdsp;slotselect;backup=1;flashimg=1
+/ltemodem            emmc      /dev/block/by-name/l_modem           flags=display=ltemodem;slotselect;backup=1;flashimg=1
+/ltefixnv1           emmc      /dev/block/by-name/l_fixnv1          flags=display=ltefixnv1;backup=1;flashimg=1
+/ltefixnv2           emmc      /dev/block/by-name/l_fixnv2          flags=display=ltefixnv2;backup=1;flashimg=1
+/lteruntimenv1       emmc      /dev/block/by-name/l_runtimenv1      flags=display=lteruntimenv1;backup=1;flashimg=1
+/lteruntimenv2       emmc      /dev/block/by-name/l_runtimenv2      flags=display=lteruntimenv2;backup=1;flashimg=1
+/wcnmodem            emmc      /dev/block/by-name/wcnmodem          flags=display=wcnmodem;slotselect;backup=1;flashimg=1
+/gnssmodem           emmc      /dev/block/by-name/gnssmodem         flags=display=gnssmodem;slotselect;backup=1;flashimg=1
+/pmsys               emmc      /dev/block/by-name/pm_sys            flags=display=pmsys;slotselect;backup=1;flashimg=1
+/misc                emmc      /dev/block/by-name/misc              flags=display=misc;backup=1;flashimg=1
+/boot                emmc      /dev/block/by-name/boot              flags=display=boot;slotselect;backup=1;flashimg=1
+/persist             emmc      /dev/block/by-name/persist           flags=display=persist;backup=1;flashimg=1
+/logo                emmc      /dev/block/by-name/logo              flags=display=logo;backup=1;flashimg=1
+/fbootlogo           emmc      /dev/block/by-name/fbootlogo         flags=display=fbootlogo;backup=1;flashimg=1
+/system              erofs     system                               flags=display=system;logical;slotselect;backup=1;flashimg=1
+/system              ext4      system                               flags=display=system;logical;slotselect;backup=1;flashimg=1
+/system_ext          erofs     system_ext                           flags=display=system_ext;logical;slotselect;backup=1;flashimg=1
+/vendor              erofs     vendor                               flags=display=vendor;logical;slotselect;backup=1;flashimg=1
+/odm                 erofs     odm                                  flags=display=odm;logical;slotselect;backup=1;flashimg=1
+/product             erofs     product                              flags=display=product;logical;slotselect;backup=1;flashimg=1
+/vendor_dlkm         erofs     vendor_dlkm                          flags=display=vendor_dlkm;logical;slotselect;backup=1;flashimg=1
+/metadata            f2fs      /dev/block/by-name/metadata          flags=display=metadata;backup=1;flashimg=1
+/metadata            ext4      /dev/block/by-name/metadata          flags=display=metadata;backup=1;flashimg=1
+/data                f2fs      /dev/block/by-name/userdata          flags=display=data;backup=1;flashimg=1
+/cache               f2fs      /dev/block/by-name/cache             flags=display=cache;backup=1;flashimg=1
+/cache               ext4      /dev/block/by-name/cache             flags=display=cache;backup=1;flashimg=1
+/mnt/vendor          ext4      /dev/block/by-name/prodnv            flags=display=vendor;backup=1;flashimg=1
+#
+#SD cards
+/external_sd	vfat		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=display="MicroSD Card 1";backup=0;storage;wipeingui;removable
+/external_sd    vfat        /dev/block/mmcblk1p1	/dev/block/mmcblk1 	flags=display="MicroSD Card 2";backup=0;storage;wipeingui;removable
+/external_sd	auto		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=display="MicroSD Card 3";backup=0;storage;wipeingui;removable
+/external_sd    auto        /dev/block/mmcblk1p1	/dev/block/mmcblk1 	flags=display="MicroSD Card 4";backup=0;storage;wipeingui;removable
+
+#OTG
+/usb-otg	auto		/dev/block/sdf1	/dev/block/sdf		  flags=display="USB-OTG 1";backup=0;storage;wipeingui;removable
+/usb-otg    auto        /dev/block/sda1 /dev/block/sda        flags=display="USB OTG 2";backup=0;storage;wipeingui;removable
+/usb-otg    auto        /dev/block/sdg1 /dev/block/sdg        flags=display="USB-OTG 3";backup=0;storage;wipeingui;removable
+/usb_otg    auto        /dev/block/sdd1 /dev/block/sdd        flags=display="USB-OTG 5";backup=0;storage;wipeingui;removable
+/usb-otg    auto        /dev/block/sda1                       flags=display="USB-OTG 6";backup=0;storage;wipeingui;removable
+/usb-otg	auto		/dev/block/sde1	/dev/block/sde		  flags=display="USB-OTG 7";backup=0;storage;wipeingui;removable
