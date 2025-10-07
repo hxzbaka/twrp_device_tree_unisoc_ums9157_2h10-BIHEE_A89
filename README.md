@@ -6,8 +6,8 @@ BIHEE A89 (codenamed _"ums9157_2h10"_)
 Basic   | Spec Sheet
 -------:|:-------------------------
 SoC     | UNISOC T157
-CPU     | 1x 3.35 GHz Cortex-X3, 3x 3.0 GHz Cortex-A715, 4x 2.0 GHz Cortex-A510
-GPU     | Immortalis-G715 MC11
+CPU     | 4x 1.56 GHz Cortex-A55, 4x 1.53 GHz Cortex-A76
+GPU     | Mali-G57
 Memory  | 3/4 GB
 Shipped Android Version | 13
 Storage | 32/64 GB
@@ -21,6 +21,3 @@ Works:
 - [X] Touch 
 - [X] Fasbootd
 - [X] USB OTG
-
-## Donate me
-![test]()
