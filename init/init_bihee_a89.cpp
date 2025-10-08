@@ -30,7 +30,6 @@ void vendor_load_properties()
         property_override(string("ro.product.") + prop + string("device"), "ums9157_2h10");
         property_override(string("ro.product.") + prop + string("model"), "ums9157_2h10_native");
         property_override(string("ro.product.") + prop + string("marketname"), "BIHEE A89");
-#        property_override(string("ro.product.") + prop + string("cert"), "23078RKD5C");
     }
     property_override("ro.bootimage.build.date.utc", "1701856971");
     property_override("ro.build.date.utc", "1701856971");
