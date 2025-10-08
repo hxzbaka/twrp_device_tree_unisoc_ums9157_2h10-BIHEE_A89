@@ -106,8 +106,8 @@ TARGET_BOARD_PLATFORM := ums9620
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Resolution
-TARGET_SCREEN_HEIGHT := 2712
-TARGET_SCREEN_WIDTH := 1220
+TARGET_SCREEN_HEIGHT := 480
+TARGET_SCREEN_WIDTH := 320
 
 # Recovery
 TARGET_NO_RECOVERY := true
@@ -131,7 +131,7 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT :=
 TW_LOAD_VENDOR_BOOT_MODULES := true
 
 # Verified Boot
-BOARD_AVB_ENABLE := true
+BOARD_AVB_ENABLE := false
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_bihee_a89
@@ -140,10 +140,10 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_bihee_a89
 # TWRP Configurations
 TW_FRAMERATE := 60
 TW_STATUS_ICONS_ALIGN := center
-TW_Y_OFFSET := 87
-TW_H_OFFSET := -87
+# TW_Y_OFFSET := 87
+# TW_H_OFFSET := -87
 TW_THEME := portrait_hdpi
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+# TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 1000
 TW_MAX_BRIGHTNESS := 4000
 
@@ -169,8 +169,8 @@ TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := zh_CN
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEVICE_VERSION := BIHEE A89 | hxzbaka 
-TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone80/temp"
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
+# TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone80/temp"
+# TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_BATTERY_SYSFS_WAIT_SECONDS := 6
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
