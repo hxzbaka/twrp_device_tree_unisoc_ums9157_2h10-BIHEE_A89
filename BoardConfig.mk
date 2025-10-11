@@ -114,7 +114,7 @@ TARGET_NO_RECOVERY := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+# TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # Screen density
 # TARGET_SCREEN_DENSITY := 480
@@ -140,12 +140,10 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_bihee_a89
 # TWRP Configurations
 TW_FRAMERATE := 60
 TW_STATUS_ICONS_ALIGN := center
-# TW_Y_OFFSET := 87
+# TW_Y_OFFSET := 87                              
 # TW_H_OFFSET := -87
 TW_THEME := portrait_hdpi
-# TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_DEFAULT_BRIGHTNESS := 1000
-TW_MAX_BRIGHTNESS := 4000
+TW_BRIGHTNESS_PATH := "/sys/devices/platform/backlight/backlight/sprd_backlight/brightness"
 
 # Fastbootd
 TW_INCLUDE_FASTBOOTD := true
@@ -160,7 +158,7 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_LPDUMP := true
 TW_INCLUDE_LPTOOLS := true
-TW_EXCLUDE_DEFAULT_USB_INIT := true
+# TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_APEX := true
 TW_INCLUDE_NTFS_3G := true
 TARGET_USES_MKE2FS := true
