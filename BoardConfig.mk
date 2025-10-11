@@ -114,7 +114,7 @@ TARGET_NO_RECOVERY := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-# TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # Screen density
 # TARGET_SCREEN_DENSITY := 480
@@ -138,10 +138,6 @@ TARGET_INIT_VENDOR_LIB := libinit_bihee_a89
 TARGET_RECOVERY_DEVICE_MODULES := libinit_bihee_a89
 
 # TWRP Configurations
-TW_FRAMERATE := 60
-TW_STATUS_ICONS_ALIGN := center
-# TW_Y_OFFSET := 87                              
-# TW_H_OFFSET := -87
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/backlight/backlight/sprd_backlight/brightness"
 
@@ -158,7 +154,6 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_LPDUMP := true
 TW_INCLUDE_LPTOOLS := true
-# TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_APEX := true
 TW_INCLUDE_NTFS_3G := true
 TARGET_USES_MKE2FS := true
@@ -169,6 +164,3 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEVICE_VERSION := BIHEE A89 | hxzbaka 
 # TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone80/temp"
 # TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
-TW_BATTERY_SYSFS_WAIT_SECONDS := 6
-TW_BACKUP_EXCLUSIONS := /data/fonts
-TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
