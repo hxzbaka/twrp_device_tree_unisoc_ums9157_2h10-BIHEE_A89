@@ -19,3 +19,6 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),ums9157_2h10)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/graphics_drm.cpp:bootable/recovery/minuitwrp/graphics_drm.cpp
